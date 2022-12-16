@@ -7,6 +7,7 @@ import math
 
 import numpy as np
 from  matplotlib.pyplot import *
+
 def matrice_systeme(h):
     noudes=1/h
     diagonal=[]
@@ -33,10 +34,12 @@ def matrice_systeme(h):
 
     return A
 
-def source(x,y): #function source
+#function source
+def source(x,y): 
     return 8*((np.pi)**2)*np.around(np.sin(math.radians(360*x)), decimals=5)*np.around(np.cos(math.radians(360*y)), decimals=5)
 
-def val_func(m): #m=maillage
+#m=maillage
+def val_func(m): 
     h=1/m
     F=[]
     for i in range(1,m):
